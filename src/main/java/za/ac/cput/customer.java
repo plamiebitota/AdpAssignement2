@@ -43,16 +43,5 @@ public class customer
         this.customerAddress = customerAddress;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        customer customer = (customer) o;
-        return customerId == customer.customerId;
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(customerId);
-    }
 }

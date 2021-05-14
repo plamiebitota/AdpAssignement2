@@ -8,7 +8,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class customerTest
 {
+    @Test
+    void CollectionTest()
+    {
+        Collection c= new LinkedHashSet();
+        customer c1 = new customer();
+         c.add(c1);
+        Iterator<customer> i=c.iterator();
+        while(i.hasNext())
+        {
+            assertEquals(c1,i.next());
+        }
 
+    }
     @Test
     void MapTest() {
         Map<Integer, customer> customerMap = new HashMap<>();
