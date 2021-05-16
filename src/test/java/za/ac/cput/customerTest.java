@@ -14,15 +14,14 @@ class customerTest
         Collection c= new LinkedHashSet();
         customer c1 = new customer();
          c.add(c1);
-        Iterator<customer> i=c.iterator();
-        while(i.hasNext())
-        {
-            assertEquals(c1,i.next());
-        }
+         System.out.println("This is the length of the array after add and before remove "+c.size());
+         System.out.println(c.contains(c1));
+         c.remove(c1);
+         System.out.println("This is the length after remove "+c.size());
 
     }
     @Test
-    void MapTest() {
+      void MapTest() {
         Map<Integer, customer> customerMap = new HashMap<>();
         customer c2 = new customer();
         customerMap.put(4,c2);
@@ -40,6 +39,8 @@ class customerTest
         while(itr.hasNext()){
             assertSame(c3,itr.next());
         }
+        customerSet.remove(c3);
+        System.out.println(customerSet.size());
     }
 
     @Test
