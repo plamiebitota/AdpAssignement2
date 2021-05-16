@@ -9,7 +9,19 @@ public class customer
     String customerSurname;
     String customerAddress;
 
+    public customer()
+    {
 
+
+    }
+
+    public customer(int customerId,String  customerName, String customerSurname,String customerAddress)
+    {
+        this.customerId = customerId;
+        this.customerSurname=customerName;
+        this.customerSurname=customerSurname;
+        this.customerAddress=customerAddress;
+    }
 
     public int getCustomerId() {
         return customerId;
